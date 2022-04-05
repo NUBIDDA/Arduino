@@ -1,1 +1,1 @@
-teawt
+print('test')
