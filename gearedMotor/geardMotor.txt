@@ -1,0 +1,46 @@
+ L298N 모터드라이버 사용
+
+-선 연결
+
+모터드라이버측
+ -12V에 배터리 VCC 연결. GND는 GND끼리 (검은색)
+
+ -ENA = 8번핀
+: 모터 동작할 때 ENA = HIGH 설정 필요
+
+ -IN1, IN2
+: 각 9, 10번핀
+
+ -OUT1, OUT2
+: 모터에 직접 연결. 모터의 VCC, GND와 배선 연결 파악할 것
+
+ 
+ 현재 상황
+
+1. 전진 동작 x
+  digitalWrite(ENA, HIGH);
+  digitalWrite(INA1, HIGH);   // 전진
+  digitalWrite(INA2, LOW); 
+
+2. 후진 동작 O
+
+  digitalWrite(ENA, HIGH);
+  digitalWrite(INA1, LOW);
+  digitalWrite(INA2, HIGH);
+
+3. 후진 PWM 출력 O (전진은 마찬가지로 X)
+
+  Serial.println("Backward-PWM");
+  analogWrite(ENA, 150);  // 절반의 힘으로 동작
+  digitalWrite(INA1, LOW); 
+  digitalWrite(INA2, HIGH); 
+
+
+확인해볼 것
+: Geared Motor가 아닌 DC모터로 동일한 조건에서 실행해도 전진은 동작하지 않음.
+
+1. 모터 드라이버
+2. 점프선
+3. 우노 (모터 단독으로 진행?)
+4. 배선 실수
+흐음...ㅠㅠ
