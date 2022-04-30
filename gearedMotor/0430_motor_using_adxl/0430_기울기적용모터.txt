@@ -1,0 +1,13 @@
+전진: RIGHT1 = LOW, RIGHT2 = HIGH / LEFT1 = LOW, LEFT2 = HIGH
+후진: RIGHT1 = HIGH, RIGHT2 = LOW / LEFT1 = HIGH, LEFT2 = LOW
+
+오르막길 주행일 때: 전진 forward()
+내리막길 주행일 때: 후진 backward()
+
+평지 및 낙상 감지 시: stop_run()
+
+
+	추가 아이디어
+
+1. 전진/후진 시 주행로의 경사 정도에 따라 바퀴 구동 세기 조절하기
+2. 낙상 감지 시 부저 등으로 주위에 도움 요청하기
