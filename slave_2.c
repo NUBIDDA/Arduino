@@ -1,4 +1,5 @@
 
+
 #define sv1 9
 #include <Servo.h>
 
@@ -23,13 +24,13 @@ void loop() {
 
 void receiveEvent(int howMany) {
   
-    int uv = Wire.read();
-    int dust = Wire.read();
+    int int_uv = Wire.read();
+    int int_dust = Wire.read();
     char mode = Wire.read();
 
-    float new_uv = uv/100;
-    float new_dust = dust/100;
-    
+    float uv = float(uv) / 100;
+    float dust = float(dust) / 100;
+     
     if (mode=='a'){
       Serial.print("자동화 모드 입니다.");
       Serial.print("\n");
@@ -46,12 +47,14 @@ void receiveEvent(int howMany) {
         Close();
       }
     }
-    if(mode=='o'){
+    
+    else if(mode=='o'){
       Serial.print("열어주세요");
       Serial.print("\n");
       Open();
     }
-    if (mode=='c'){
+    
+    else if (mode=='c'){
       Serial.print("닫아주세요");
       Serial.print("\n");
       Close();
