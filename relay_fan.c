@@ -46,6 +46,10 @@ void loop() {
 float discomfortIndex(float temp, float humi) {
     return ( 1.8f * temp ) - ( 0.55 * (1 - humi / 100.0f ) * ( 1.8f * temp - 26 )) + 32;
 }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 4d102812af81b2355e6e9fbac82dcd5f1a78f27d
 
  

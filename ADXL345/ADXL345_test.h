@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 // https://learn.sparkfun.com/tutorials/adxl345-hookup-guide
 
+=======
+>>>>>>> 4d102812af81b2355e6e9fbac82dcd5f1a78f27d
 #include <SparkFun_ADXL345.h>         // SparkFun ADXL345 Library
 
 //ADXL345 adxl = ADXL345(10);           // USE FOR SPI COMMUNICATION, ADXL345(CS_PIN);
